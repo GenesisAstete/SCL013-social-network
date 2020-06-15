@@ -53,7 +53,6 @@ export const iniciarSesion = () => {
         try {
             const provider = new firebase.auth.GoogleAuthProvider()
             await firebase.auth().signInWithPopup(provider)
-              document.getElementById('nombreUser').innerHTML+=`${user.displayName}`;
         } catch (error) {
             console.log(error)
         }
