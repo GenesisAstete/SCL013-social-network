@@ -8,6 +8,7 @@ myFunction();
 
 // funcion que verifica si hay un usuario registrado
 firebase.auth().onAuthStateChanged((user) => {
+<<<<<<< HEAD
   if (user) {
     home();
     cerrarSesion();
@@ -17,6 +18,8 @@ firebase.auth().onAuthStateChanged((user) => {
     login();
     iniciarSesion();
   }
+=======
+>>>>>>> 3e53c09... Union CSS Inicio y boton borrar
     if (user) {
         home();
         cerrarSesion()
