@@ -49,10 +49,11 @@ export const cerrarSesion = () => {
 export const iniciarSesion = () => {
     const btngoogle = document.querySelector('#btngoogle')
     btngoogle.addEventListener('click', async () => {
-        console.log('me diste click google')
+   
         try {
             const provider = new firebase.auth.GoogleAuthProvider()
             await firebase.auth().signInWithPopup(provider)
+              document.getElementById('nombreUser').innerHTML+=`${user.displayName}`;
         } catch (error) {
             console.log(error)
         }
@@ -79,4 +80,89 @@ export const restablecerContrasena = () => {
     });
   }
   
-  
+//leer data
+var db = firebase.firestore();
+
+export const guardar = () => {
+
+  const pica = document.getElementById("inputHome").value;
+  const tipo = document.getElementById("opcionPublicar").value;
+  db.collection("feña").add({
+
+      post: pica,
+      foto: "",
+      tipo: tipo
+
+    })
+    .then(function (docRef) {
+      console.log("Document written with ID: ", docRef.id);
+      document.getElementById("opcionPublicar").value = '';
+      document.getElementById("opcionPublicar").value = '';
+    })
+    .catch(function (error) {
+      console.error("Error adding document: ", error);
+    });
+  mostrarPublicacionHome();
+}
+
+//imprimir publicacion
+export const mostrarPublicacionHome = () => {
+
+  db.collection("feña").onSnapshot((querySnapshot) => {
+
+    //tabla.innerHTML = "";
+    const idPublicacion = document.getElementById("contenedorMayor")
+    idPublicacion.innerHTML = "";
+
+    querySnapshot.forEach((doc) => {
+
+      idPublicacion.innerHTML += /*html*/ ` 
+
+    <div id="contenedorPublicacion "data-publicacion="${doc.id}" > 
+      <div id="contenedorIdentidad"> 
+        <img id="fotoParticipante" scr="./image/Ellipse.png"/>
+        <p id="nombreUser"></p>
+      </div>
+      <div id="imagenPublicacion"> </div>
+        <p id="textoPublicacion"> ${doc.data().post}</p>
+        <button class="btnEliminar">Eliminar  </button> 
+        <button class="btnEditar">Editar  </button> 
+        <p id="tipoPublicacion"> ${doc.data().tipo}</p>
+        <div id="interacciones">
+          <a id="btnCompartir"></a>
+          <a id="btnRecomiendo"></a>
+        </div>
+      </div>
+`
+
+     
+      //borrar publicaciones
+      let botonEliminar = document.querySelectorAll(".btnEliminar")
+      botonEliminar.forEach(btn => {
+        console.log("ingresoooooooooo eliminar")
+        btn.addEventListener("click", (e) => {
+
+          let idPublicacion = e.target.parentElement.getAttribute("data-publicacion");
+          eliminar(idPublicacion);
+          console.log("borraaaaarrrrrrrrrr")
+
+        });
+
+      })
+
+    });
+
+  });
+
+};
+
+const eliminar = (id) => {
+  console.log("ingresooo a eliminar ")
+  db.collection("feña").doc(id).delete().then(function () {
+    console.log("Document successfully deleted!");
+
+  }).catch(function (error) {
+    console.error("Error removing document: ", error);
+  });
+}  
+
