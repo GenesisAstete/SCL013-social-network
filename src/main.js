@@ -45,8 +45,11 @@ firebase.auth().onAuthStateChanged((user) => {
 });
  
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 6a3befa... agregar editar y guardar datos usuarios
 =======
 
 
 >>>>>>> c2463f9... funcion editar
+=======
+>>>>>>> 55a6d03... css responsive template de inicio
