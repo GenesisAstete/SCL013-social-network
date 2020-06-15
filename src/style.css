@@ -117,8 +117,7 @@
     background-image: url(./image/login/recuperarcelu.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 100%;
-    height: 816px;
+    height: 896px;
 }
 >>>>>>> 55a6d03... css responsive template de inicio
 /*input de ingreso, registro y recuperacion*/
@@ -256,6 +255,7 @@ header {
     color: black;
     height: 47px;
     font-size: 20px;
+<<<<<<< HEAD
 }
 
 #fotoParticipante {
@@ -626,6 +626,8 @@ header {
     color: black;
     height: 47px;
     font-size: 20px;
+=======
+>>>>>>> 7fd278c... css template login, registro y recuperacion
 }
 
 #fotoParticipante {
@@ -786,10 +788,14 @@ header {
 
     .contenedorRecuperar {
 <<<<<<< HEAD
+<<<<<<< HEAD
         background-image: url(./image/login/termasEscritorio.jpg);
 =======
         background-image: url(./image/login/termasrrecuperar.jpg);
 >>>>>>> 55a6d03... css responsive template de inicio
+=======
+        background-image: url(./image/login/termasEscritorio.jpg);
+>>>>>>> 7fd278c... css template login, registro y recuperacion
         background-repeat: no-repeat;
         background-size: 100% 100%;
         height: 1077px;
