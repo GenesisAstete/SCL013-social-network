@@ -4,13 +4,13 @@ export const Rpassword = () => {
 
     document.getElementById('root').innerHTML = /*html*/`
     
-    <div class="contenedorRegistro" id="cont-recuperar">
-    <p class="parrafoUno">Recuperar Contraseña</p>
-    <img id="logo" src="./image/logo.jpg">
-   
+    <div class="contenedorRecuperar contGeneralFormularios">
+    <p class="title2 title">Recuperar Contraseña</p>
+    <img class="logo2" src="./image/logo.jpg">
+    <img class="usuario2" src="image/usercian 1.png">
     <div class="contenedorIngreso" >
-      <input class="emailR" id="emailRecuperar" placeholder="Correo electronico" type="email">
-      <button  id="enviarR">Enviar</button>
+      <input class="inputIngreso input2" id="emailRecuperar" placeholder="Correo electronico" type="email">
+      <button  class="inputIngreso input2"id="enviarR">Enviar</button>
     </div>
   </div>
     `

@@ -2,72 +2,54 @@ import {loginEmail} from "../viewController.js" ;
 import {registro} from "./templateRegistro.js";
 import {Rpassword} from "./templateRpassword.js";
 
+
 export const login = () => {
 window.location.hash = '/login';
 document.getElementById('root').innerHTML =  /*html*/ `
   
 <div id="contenedorGeneral">
-    <img id="logo" src="./image/logo.jpg">
     <div class="carrusel">
-      <div id="imagenUno">
-        <div class="textoInicial">
-          <p class="parrafoUno">¿Te gusta </p>
-          <p class="parrafoUno">viajar por Chile ?</p>
-        </div>
-
+      <div id="imagenUno" class="imagenSlider">
+          <p class="title">¿te gusta viajar por Chile? </p>
       </div>
     </div>
 
     <div class="carrusel">
-      <div id="imagenDos">
-        <div class="textoInicial">
-          <p class="parrafoUno">Publica tus</p>
-          <p class="parrafoUno">mejores picadas</p>
-        </div>
+      <div id="imagenDos" class="imagenSlider"> 
+          <p class="title">publica tus           mejores picadas</p>
       </div>
     </div>
 
     <div class="carrusel">
-      <div id="imagenTres">
-        <div class="textoInicial">
-          <p class="parrafoUno">Conoce a otros </p>
-          <p class="parrafoUno">viajeros</p>
-        </div>
+      <div id="imagenTres" class="imagenSlider">
+        <p class="title">Conoce a otros viajeros </p>
       </div>
     </div>
 
-
     <div class="carrusel">
-      <div id="imagenCuatro">
-        <div class="textoInicial">
-          <p class="parrafoUno">Recorrer Chile </p>
-          <p class="parrafoUno">ya no es </p>
-          <p class="parrafoUno">una excusa </p>
-        </div>
+      <div id="imagenCuatro" class="imagenSlider">
+          <p class="title">recorrer Chile ya no es una excusa</p>
       </div>
     </div> 
-
-    <br>
-    <div style="text-align:center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-
-    </div>
   </div>
-    <img id="usuario" src="image/usercian 1.png">
+
+
     <!--Formulario de logeo-->
-    <div class="contenedorIngreso">
-      <input class="email" id="emailIngreso" placeholder="Correo electronico" type="email">
-      <input class="contraseña" id="passIngreso" placeholder="Contraseña" type="password">
-      <button class="iniciar" id="iniciarSesion">Iniciar sesion</button>
-      <button id="btngoogle"><img id="iconoGoogle"/> sesión con Google</button> 
-      <p id="textoOlvido">Recuperar Contraseña </p>
-      <p id="pTres">¿Aún no eres parte?</p>
-      <button id="botonRegistrate"> Registrate</button>
-    </div>
+  <div class="contGeneralFormularios" > 
+    <img class="logo" id="btnlogo"src="./image/logo.jpg">
+    <img id="usuario" src="image/usercian 1.png">
+      <div class="contenedorIngreso">
+        <input class="inputIngreso" id="emailIngreso" placeholder="Correo electronico" type="email">
+        <input class="inputIngreso" id="passIngreso" placeholder="Contraseña" type="password">
+        <button class="inputIngreso" id="iniciarSesion">Iniciar sesion</button>
+        <p id="textoOlvido">¿Olvidó su Contraseña? </p>
+        <button id="btngoogle">Iniciar Sesión con Google</button> 
+        <p id="pTres">¿Aún no eres parte?</p>
+        <button id="botonRegistrate"> Registrate</button>
+      </div>
   </div>
+  </div>
+
     `;
 
  const botonIngreso = document.getElementById('iniciarSesion');
@@ -91,7 +73,7 @@ document.getElementById('root').innerHTML =  /*html*/ `
 const showSlides = ()=> {
     let i;
     let slides = document.getElementsByClassName("carrusel");
-    let dots = document.getElementsByClassName("dot");
+    let dots = document.getElementsByClassName(".dot");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
 
@@ -100,14 +82,13 @@ const showSlides = ()=> {
     if (slideIndex > slides.length) {
         slideIndex = 1
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
+
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 7000);
 }  
-showSlides();
+
+
+  showSlides();
 
 }
 

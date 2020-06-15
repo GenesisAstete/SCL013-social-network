@@ -1,27 +1,27 @@
-import {registrar} from "../viewController.js" 
+import {registrar} from "../viewController.js" ;
+
 export const registro = () => {
   window.location.hash = '/registro';
 
  document.getElementById('root').innerHTML = /*html*/ `
-    
-  <div id="contenedorGeneralRegistro" class="contenedorRegistro">
-    <img id="logo" src="./image/logo.jpg">
-   
+
+  <div class="contenedorRegistro contGeneralFormularios" >
+    <img class="logo2" id="btnlogo"src="./image/logo.jpg">
+    <p class="title2 title">registrar</p>
+    <img class="usuario2" src="image/usercian 1.png">
     <div class="contenedorIngreso" >
-      <input class="email" id="emailRegistro" placeholder="Correo electronico" type="email">
-      <input class="contraseña" id="passRegistro" placeholder="Contraseña" type="password">
-      <input class="usuario" id="usuarioRegistro" placeholder="Nombre de usuario" type="text">
-      <button class="iniciar" id="registrarse"> Registrarse</button>
+      <input class="inputIngreso input2" id="emailRegistro" placeholder="Correo electronico" type="email">
+      <input class="inputIngreso input2" id="passRegistro" placeholder="Contraseña" type="password">
+      <input class="inputIngreso input2" id="usuarioRegistro" placeholder="Nombre de usuario" type="text">
+      <button class="inputIngreso input2" id="registrarse"> Registrarse</button>
     </div>
   </div>
     `
 
   const botonRegistro = document.getElementById('registrarse');
   botonRegistro.addEventListener("click", () => {
-    console.log("FUNCIONOOOOOOOOOOO");
     registrar(); 
   })
-
 
 }
 
