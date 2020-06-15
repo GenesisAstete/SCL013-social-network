@@ -33,6 +33,13 @@ myFunction();
 
 //funcion que verifica si hay un usuario registrado
 firebase.auth().onAuthStateChanged((user) => {
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var textoVerificado="";
     if (user) {
         home();
         cerrarSesion()

@@ -470,6 +470,7 @@ export const editar = (id) => {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d9b47e6... css template login, registro y recuperacion
 =======
 =======
@@ -750,3 +751,5 @@ export const editar = (id) => {
  
 }
 >>>>>>> 1619362... unir post y uid
+=======
+>>>>>>> d4ba488... css template login, registro y recuperacion
