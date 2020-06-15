@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { guardar, mostrarPublicacionHome, dataGmail } from '../viewController.js';
 =======
 <<<<<<< HEAD
@@ -95,12 +96,42 @@ export const home = () => {
       <input class="fotoPost" type="file"> 
       <select id="opcionPublicar">
 
+=======
+import {guardar} from "../viewController.js";
+
+import {mostrarPublicacionHome} from "../viewController.js";
+
+export const home = () => {
+
+    window.location.hash = '/home';
+    //leer documentos
+
+    document.getElementById('root').innerHTML =
+        /*html*/ `
+  <header>
+  <img id="logoMenu" src="./image/logo.jpg">
+  <div id="contenedorBotonesMenu">
+      <div class="colorUno">Ruta</div> 
+      <div class="colorDos">Hospedaje</div>
+      <div class="colorUno">Comida</div>
+      <div class="colorDos">Clima</div>
+      <div class="colorUno">Transporte</div>
+      <div class="colorDos">Tour</div>
+  </div>
+  </header>
+  <div id="contenedorEscribir">
+      <input id="inputHome" type="text" placeholder="¿Cual es tu pica'?">
+      <input type="file"> 
+      <select id="opcionPublicar">
+
+>>>>>>> 7fd278c... css template login, registro y recuperacion
       <option>Ruta </option>
       <option> Hospedaje</option>
       <option>Comida </option>
       <option>Clima </option>
       <option>Transporte </option>
       <option> Tour</option>
+<<<<<<< HEAD
 
        </select>
 
@@ -110,6 +141,17 @@ export const home = () => {
 
 <div id="contenedorMayor">
 
+=======
+
+       </select>
+
+ 
+  <button id="btnPublicar"> Publicar</button>
+   </div>
+
+<div id="contenedorMayor">
+
+>>>>>>> 7fd278c... css template login, registro y recuperacion
 </div>
 <div class="contenedorSalida"> 
   <a id="btnHome" href='#/home'></a>
@@ -122,7 +164,11 @@ export const home = () => {
     botonPublicar.addEventListener("click", () => {
         guardar();
     });
+<<<<<<< HEAD
 mostrarPublicacionHome()          
+=======
+mostrarPublicacionHome()
+>>>>>>> 7fd278c... css template login, registro y recuperacion
 
 >>>>>>> 7fd278c... css template login, registro y recuperacion
 }
