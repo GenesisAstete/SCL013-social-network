@@ -275,6 +275,11 @@ export const editar = (id) => {
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
       });
+<<<<<<< HEAD
   })
 
 }
+=======
+  }
+}
+>>>>>>> d9b47e6... css template login, registro y recuperacion
