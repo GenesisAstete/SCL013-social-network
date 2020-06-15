@@ -3,7 +3,6 @@
     padding: 0;
     text-decoration: none;
 }
-
 /*tipografía de la app*/
 @font-face {
     font-family: 'Brushstrike';
@@ -11,12 +10,10 @@
     font-family: "Roboto-Regular";
     src: url(./fonts/Roboto-Regular.ttf);
 }
-
 /*contenedor template login*/
-#contenedorGeneral {
+#contenedorGeneral{
     width: 100%;
 }
-
 /*formulario de login - template login*/
 .contGeneralFormularios {
     display: flex;
@@ -26,36 +23,24 @@
 }
 
 /*clase para imágenes de slider*/
-.imagenSlider {
+.imagenSlider{
     width: 100%;
     height: 816px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 /*imágenes recortadas para celular*/
-#imagenUno {
-    background-image: url(./image/login/torres.png);
-}
-
-#imagenDos {
-    background-image: url(./image/login/Queulat_glaciar_24\ 1.png);
-}
-
-#imagenTres {
-    background-image: url(./image/login/iglesia-machuca\ 1.png);
-}
-
-#imagenCuatro {
-    background-image: url(./image/login/moaiscelu.jpg);
-}
+#imagenUno {background-image: url(./image/login/torres.png);}
+#imagenDos {background-image: url(./image/login/Queulat_glaciar_24\ 1.png);}
+#imagenTres {background-image: url(./image/login/iglesia-machuca\ 1.png);}
+#imagenCuatro {background-image: url(./image/login/moaiscelu.jpg);}
 
 .logo {
     position: absolute;
     width: 187px;
     height: 125px;
     border-radius: 10px;
-    margin-top: -700px;
+    margin-top: -700px; 
 
 }
 
@@ -69,17 +54,15 @@
 
 /*icono circular usuario*/
 #usuario {
-    position: absolute;
+    position: absolute; 
     margin-top: -437px;
     z-index: 2;
 }
-
 /*template registro y recuperar*/
-.usuario2 {
+.usuario2{
     margin-top: -115px;
     z-index: 1;
 }
-
 /*contenedor de input y botones de login*/
 .contenedorIngreso {
     position: absolute;
@@ -92,9 +75,8 @@
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
 }
-
 /*texto ¿Olvido su contraseña? - template login*/
-#textoOlvido {
+#textoOlvido{
     text-align: center;
     font-size: 15px;
     color: black;
@@ -102,7 +84,6 @@
     margin-top: 2%;
     cursor: pointer;
 }
-
 /*texto ¿Aún no eres parte? - template login*/
 #pTres {
     margin-top: 10px;
@@ -110,15 +91,13 @@
     font-family: "Roboto-Regular";
     font-size: 15px;
 }
-
 /*template registro fondo */
 .contenedorRegistro {
     background-image: url(./image/puente.png);
     background-repeat: no-repeat;
-    height: 896px;
+    height: 896px;   
     z-index: -1;
 }
-
 /*template recuperar*/
 .contenedorRecuperar {
     background-image: url(./image/login/recuperarcelu.jpg);
@@ -126,7 +105,6 @@
     background-size: 100%;
     height: 896px;
 }
-
 /*input de ingreso, registro y recuperacion*/
 .inputIngreso {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -136,14 +114,13 @@
     font-family: "Roboto-Regular";
     margin-top: 5.5%;
 }
-
-.input2 {
-    margin-top: 8.5%;
+.input2{
+    margin-top:8.5%;
 }
 
 /*placeholder */
 input::-webkit-input-placeholder {
-    padding-left: 10px;
+   padding-left: 10px;
 }
 
 #emailIngreso #registrarse {
@@ -155,7 +132,6 @@ input::-webkit-input-placeholder {
     background-image: url(./image/inputPass.png);
     background-repeat: no-repeat;
 }
-
 /*estilo botones en general*/
 button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -165,7 +141,6 @@ button {
     cursor: pointer;
     font-family: "Roboto-Regular";
 }
-
 /*boton iniciar sesion con google*/
 #btngoogle {
     background-image: url(./image/buttonGoogle.png);
@@ -173,18 +148,16 @@ button {
     background-size: 70%;
     background-position-y: center;
 }
-
 /*boto iniciar sesion con email*/
-#iniciarSesion {
+#iniciarSesion{
     background: linear-gradient(180.75deg, #039F87 3.82%, #00D1CD 96.19%);
     box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-#registrarse {
+#registrarse{
     background: linear-gradient(180.75deg, #039F87 3.82%, #00D1CD 96.19%);
     box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
 }
-
 /*titulos template login*/
 .title {
     font-size: 300%;
@@ -195,12 +168,10 @@ button {
     width: 98%;
     position: absolute;
 }
-
 /*titulo registro y recuperar */
 .title2 {
     margin-top: -180px;
 }
-
 /*muro general*/
 header {
     background: #03293C;
@@ -248,7 +219,7 @@ header {
     margin-left: 30px;
 }
 
-#contenedorEscribir {
+#contenedorEscribir{
     margin-top: 47%;
 }
 
@@ -314,14 +285,6 @@ header {
     width: 401px;
 }
 
-.btnEditar {
-    width: 231px;
-}
-
-.btnEliminar {
-    width: 186px;
-}
-
 /*ultimo contenedor , para salir o entrar a otra pag*/
 .contenedorSalida {
     background: #03293C;
@@ -350,31 +313,19 @@ header {
     background-repeat: no-repeat;
     width: 49px;
 }
-
 /*Computador*/
-@media (min-width: 1024px)
-
-/* and (max-width: 1080px)  */
-    {
+@media (min-width: 1024px) /* and (max-width: 1080px)  */{
 
     /*cambio de imagenes de fondo para la version de tablet y escritorio*/
-    #imagenUno {
-        background-image: url(./image/login/torresEscritorio.png);
-    }
+    #imagenUno {background-image: url(./image/login/torresEscritorio.png);}
 
-    #imagenDos {
-        background-image: url(./image/login/cascadaEscritorio.png);
-    }
+    #imagenDos {background-image: url(./image/login/cascadaEscritorio.png);}
 
-    #imagenTres {
-        background-image: url(./image/login/iglesiaEscritorio.png);
-    }
+    #imagenTres {background-image: url(./image/login/iglesiaEscritorio.png);}
 
-    #imagenCuatro {
-        background-image: url(./image/login/moais.jpg);
-    }
+    #imagenCuatro {background-image: url(./image/login/moais.jpg);} 
 
-    .imagenSlider {
+    .imagenSlider{
         height: 1077px;
         font-size: 20px;
     }
@@ -384,7 +335,7 @@ header {
     }
 
     .logo {
-        margin-top: -956px;
+       margin-top: -956px;
     }
 
     .contenedorRegistro {
@@ -394,22 +345,18 @@ header {
         height: 1077px;
         font-size: 20px;
     }
-
-    .logo2 {
+    .logo2{
         margin-top: -392px;
     }
-
-    .usuario2 {
+    .usuario2{
         margin-top: -311px;
         z-index: 1;
     }
-
-    .title2 {
+    .title2{
         margin-top: -226px;
     }
-
-    .input2 {
-        margin-top: 8.5%;
+    .input2{
+        margin-top:8.5%;
     }
 
     .contenedorRecuperar {
@@ -418,5 +365,5 @@ header {
         background-size: 100% 100%;
         height: 1077px;
     }
-
+    
 }
