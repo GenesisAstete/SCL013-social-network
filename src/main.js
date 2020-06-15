@@ -8,6 +8,7 @@ myFunction();
 
 // funcion que verifica si hay un usuario registrado
 firebase.auth().onAuthStateChanged((user) => {
+<<<<<<< HEAD
   if (user) {
     home();
     cerrarSesion();
@@ -17,4 +18,22 @@ firebase.auth().onAuthStateChanged((user) => {
     login();
     iniciarSesion();
   }
+=======
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var textoVerificado="";
+    if (user) {
+        home();
+        cerrarSesion()
+        console.log(user)
+    } else {
+        console.log('no existes')
+        login();
+        iniciarSesion()
+    }
+>>>>>>> d4ba488... css template login, registro y recuperacion
 });

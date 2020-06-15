@@ -285,19 +285,6 @@ header {
     width: 401px;
 }
 
-.btnEditar {
-    width: 231px;
-}
-
-.btnEliminar {
-    width: 186px;
-}
-
-#inputReescribir {
-    height: 80px;
-    width: 375px
-}
-
 /*ultimo contenedor , para salir o entrar a otra pag*/
 .contenedorSalida {
     background: #03293C;
