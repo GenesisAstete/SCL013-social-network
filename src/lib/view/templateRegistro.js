@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import { registrar } from "../viewController.js";
+=======
+import {registrar} from "../viewController.js" ;
+>>>>>>> 6a3befa... agregar editar y guardar datos usuarios
 
 export const registro = () => {
   window.location.hash = '/registro';
 
+<<<<<<< HEAD
   document.getElementById('root').innerHTML = /*html*/ `
+=======
+ document.getElementById('root').innerHTML = /*html*/ `
+>>>>>>> 6a3befa... agregar editar y guardar datos usuarios
 
   <div class="contenedorRegistro contGeneralFormularios" >
     <img class="logo2" id="btnlogo"src="./image/logo.jpg">
@@ -16,6 +24,7 @@ export const registro = () => {
       <button class="inputIngreso input2" id="registrarse"> Registrarse</button>
     </div>
   </div>
+<<<<<<< HEAD
     `;
 
   const botonRegistro = document.getElementById('registrarse');
@@ -23,3 +32,14 @@ export const registro = () => {
     registrar();
   });
 };
+=======
+    `
+
+  const botonRegistro = document.getElementById('registrarse');
+  botonRegistro.addEventListener("click", () => {
+    registrar(); 
+  })
+
+}
+
+>>>>>>> 6a3befa... agregar editar y guardar datos usuarios
