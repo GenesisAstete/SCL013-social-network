@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*aqui iran las funciones de firebase*/
 
 export const registrar = () => {
@@ -471,6 +472,8 @@ export const editar = (id) => {
 >>>>>>> d9b47e6... css template login, registro y recuperacion
 =======
 =======
+=======
+>>>>>>> 505ca5c... registro guardando usuario
 /*aqui iran las funciones de firebase*/
 
 export const registrar = () => {
@@ -676,6 +679,7 @@ export const editar = (id) => {
       });
   }
 }
+<<<<<<< HEAD
 >>>>>>> c2463f9... funcion editar
 >>>>>>> 0277fdd... funcion editar
 =======
@@ -688,3 +692,5 @@ export const editar = (id) => {
   }
 }
 >>>>>>> a73173d... funcion editar
+=======
+>>>>>>> 505ca5c... registro guardando usuario

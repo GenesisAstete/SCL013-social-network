@@ -121,7 +121,7 @@ export const home = () => {
   </header>
   <div id="contenedorEscribir">
       <input id="inputHome" type="text" placeholder="¿Cual es tu pica'?">
-      <input type="file"> 
+      <input class="fotoPost" type="file"> 
       <select id="opcionPublicar">
 
 >>>>>>> 7fd278c... css template login, registro y recuperacion
@@ -165,10 +165,14 @@ export const home = () => {
         guardar();
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 mostrarPublicacionHome()          
 =======
 mostrarPublicacionHome()
 >>>>>>> 7fd278c... css template login, registro y recuperacion
+=======
+mostrarPublicacionHome()          
+>>>>>>> 433206d... registro guardando usuario
 
 >>>>>>> 7fd278c... css template login, registro y recuperacion
 }
