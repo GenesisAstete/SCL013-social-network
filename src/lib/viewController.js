@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*aqui iran las funciones de firebase*/
 
 export const registrar = () => {
@@ -480,6 +481,9 @@ export const editar = (id) => {
 =======
 /* aqui iran las funciones de firebase*/
 >>>>>>> 1619362... unir post y uid
+=======
+/*aqui iran las funciones de firebase*/
+>>>>>>> c2463f9... funcion editar
 
 export const registrar = () => {
   console.log('diste clic en registrar')
@@ -487,10 +491,14 @@ export const registrar = () => {
   const pass = document.querySelector('#passRegistro').value;
   const usuario = document.querySelector('#usuarioRegistro').value;
   firebase.auth().createUserWithEmailAndPassword(email, pass).then(function (data) {
+<<<<<<< HEAD
     console.log("ingreso a registrar")
     guardarUsuario()
     enviarCorreo()
     
+=======
+    enviarCorreo()
+>>>>>>> c2463f9... funcion editar
   }).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -504,6 +512,7 @@ export const registrar = () => {
   });
 }
 
+<<<<<<< HEAD
 /*editar perfil*/
 /* export const editPerfil=(username, onSuccess, onError)=>{
   const user = firebase.auth().currentUser;
@@ -517,6 +526,8 @@ export const registrar = () => {
   });
 } */
 
+=======
+>>>>>>> c2463f9... funcion editar
 export const enviarCorreo = () => {
   firebase.auth().currentUser.sendEmailVerification().then(function () {
     alert('¡Verificación de correo enviada!');
@@ -549,9 +560,13 @@ export const iniciarSesion = () => {
 
     try {
       const provider = new firebase.auth.GoogleAuthProvider()
+<<<<<<< HEAD
       await firebase.auth().signInWithPopup(provider);
       const user = result.user;
       console.log('user ', user);
+=======
+      await firebase.auth().signInWithPopup(provider)
+>>>>>>> c2463f9... funcion editar
     } catch (error) {
       console.log(error)
     }
@@ -581,6 +596,7 @@ export const restablecerContrasena = () => {
 //leer data
 var db = firebase.firestore();
 
+<<<<<<< HEAD
 //data user google
 
 
@@ -605,10 +621,13 @@ export const guardarUsuario = () => {
   })
 }
 
+=======
+>>>>>>> c2463f9... funcion editar
 export const guardar = () => {
 
   const post = document.getElementById("inputHome").value;
   const tipo = document.getElementById("opcionPublicar").value;
+<<<<<<< HEAD
   const user = firebase.auth().currentUser;
   db.collection('publicaciones').add({
 
@@ -621,6 +640,13 @@ export const guardar = () => {
     likes: [],
     /*time: time,*/
     photo: '',
+=======
+  db.collection("pruebaGenesis").add({
+
+      post: post,
+      foto: "",
+      tipo: tipo
+>>>>>>> c2463f9... funcion editar
 
     })
     .then(function (docRef) {
@@ -634,6 +660,7 @@ export const guardar = () => {
   mostrarPublicacionHome();
 }
 
+<<<<<<< HEAD
 
 const eliminar = (id) => {
   console.log("ingresooo a eliminar ")
@@ -670,11 +697,35 @@ export const mostrarPublicacionHome = () => {
       <div id="contenedorPubli"> 
       <p id="textoPublicacion"> ${doc.data().post}</p>
       </div> 
+=======
+//imprimir publicacion
+export const mostrarPublicacionHome = () => {
+  db.collection("pruebaGenesis").onSnapshot((querySnapshot) => {
+
+    //tabla.innerHTML = "";
+    const idPublicacion = document.getElementById("contenedorMayor")
+    idPublicacion.innerHTML = "";
+
+    querySnapshot.forEach((doc) => {
+
+      idPublicacion.innerHTML += /*html*/ ` 
+      <div id="contenedorPublicacionEditar "data-publicacionEditar='${doc.id}'> 
+    <div id="contenedorPublicacion "data-publicacion="${doc.id}" > 
+      <div id="contenedorIdentidad"> 
+        <img id="fotoParticipante" scr="./image/Ellipse.png"/>
+        <p id="nombreUser"></p>
+      </div>
+      <div id="imagenPublicacion"> </div>
+        <p id="textoPublicacion"> ${doc.data().post}</p>
+        <button class="btnEliminar">Eliminar  </button> 
+        <button class="btnEditar">Editar  </button> 
+>>>>>>> c2463f9... funcion editar
         <p id="tipoPublicacion"> ${doc.data().tipo}</p>
         <div id="interacciones">
           <a id="btnCompartir"></a>
           <a id="btnRecomiendo"></a>
         </div>
+<<<<<<< HEAD
         <div id="contenedorBtnEdicion"> 
          <button class="btnEliminar">Eliminar  </button> 
         <button class="btnEditar">Editar  </button>
@@ -683,18 +734,30 @@ export const mostrarPublicacionHome = () => {
       </div>
       </div>
 `;
+=======
+      </div>
+      </div>
+`
+>>>>>>> c2463f9... funcion editar
       //borrar publicaciones
       let botonEliminar = document.querySelectorAll(".btnEliminar")
       botonEliminar.forEach(btn => {
         console.log("ingresoooooooooo eliminar")
         btn.addEventListener("click", (e) => {
+<<<<<<< HEAD
           let idPublicacion = e.target.parentElement.parentElement.getAttribute("data-publicacion");
+=======
+          let idPublicacion = e.target.parentElement.getAttribute("data-publicacion");
+>>>>>>> c2463f9... funcion editar
           eliminar(idPublicacion);
           console.log("borraaaaarrrrrrrrrr")
         });
       })
+<<<<<<< HEAD
     })
     
+=======
+>>>>>>> c2463f9... funcion editar
       //editar publicacion
       let botonEditar = document.querySelectorAll(".btnEditar")
       botonEditar.forEach(btn => {
@@ -702,6 +765,7 @@ export const mostrarPublicacionHome = () => {
         console.log("ingreso al query de EDITAR")
         btn.addEventListener("click", (event) => {
 
+<<<<<<< HEAD
           let idPublicacion = event.target.parentElement.parentElement.parentElement.getAttribute("data-publicacionEditar");
           console.log(idPublicacion);
           editar(idPublicacion);
@@ -711,22 +775,70 @@ export const mostrarPublicacionHome = () => {
    /*  }); */
   });
 };
+=======
+          let idPublicacion = event.target.parentElement.parentElement.getAttribute("data-publicacionEditar");
+          console.log(idPublicacion);
+          editar(idPublicacion);
+
+        })
+      })
+    })
+  });
+};
+
+const eliminar = (id) => {
+  console.log("ingresooo a eliminar ")
+  db.collection("pruebaGenesis").doc(id).delete().then(function () {
+    console.log("Document successfully deleted!");
+
+  }).catch(function (error) {
+    console.error("Error removing document: ", error);
+  });
+}
+
+>>>>>>> c2463f9... funcion editar
 //editar publicacion
 export const editar = (id) => {
   console.log("ingreso a la funcion editarrrr")
   //editado con lore
+<<<<<<< HEAD
   db.collection("publicacion").doc(id).get().then((doc) => {
     document.getElementById("inputReescribir").value = doc.data().post;
     document.getElementById("opcionPublicar").value = doc.data().tipo;
   });
 
 <<<<<<< HEAD
+=======
+  db.collection("pruebaGenesis").doc(id).get().then(doc => {
+
+    console.log(doc.data().post);
+    document.getElementById("inputHome").value = doc.data().post;
+    document.getElementById("opcionPublicar").value = doc.data().tipo;
+  })
+  const botonEditar = document.getElementById("btnEditar");
+  botonEditar.onclick = function () {
+    const editando = db.collection("pruebaGenesis").doc(id);
+    const post = document.getElementById("inputHome").value
+    const tipo = document.getElementById("opcionPublicar").value
+
+    return editando.update({
+        post: post,
+        tipo: tipo
+
+      })
+      .then(function () {
+        console.log("Document successfully updated!");
+        botonEditar.innerHTML = "Publicacion Editada";
+        const post = document.getElementById("inputHome").value = "";
+        const tipo = document.getElementById("opcionPublicar").value = "";
+>>>>>>> c2463f9... funcion editar
       })
       .catch(function (error) {
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
       });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -753,3 +865,6 @@ export const editar = (id) => {
 >>>>>>> 1619362... unir post y uid
 =======
 >>>>>>> d4ba488... css template login, registro y recuperacion
+=======
+}
+>>>>>>> c2463f9... funcion editar

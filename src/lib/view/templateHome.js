@@ -97,7 +97,7 @@ export const home = () => {
   </header>
   <div id="contenedorEscribir">
       <input id="inputHome" type="text" placeholder="¿Cual es tu pica'?">
-      <input type="file"> 
+      <input class="fotoPost" type="file"> 
       <select id="opcionPublicar">
 
 <<<<<<< HEAD
@@ -153,7 +153,7 @@ export const home = () => {
     botonPublicar.addEventListener("click", () => {
         guardar();
     });
-mostrarPublicacionHome()
+mostrarPublicacionHome()          
 
 >>>>>>> 7fd278c... css template login, registro y recuperacion
 }
