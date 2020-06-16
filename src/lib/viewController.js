@@ -6,7 +6,8 @@ export const registrar = () =>{
     const pass = document.querySelector('#passRegistro').value;
     const usuario = document.querySelector('#usuarioRegistro').value;
     firebase.auth().createUserWithEmailAndPassword(email, pass).then(function (data) {
-        enviarCorreo()
+        enviarCorreo();
+        guardarUsuario();
       }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -79,8 +80,28 @@ export const restablecerContrasena = () => {
     });
   }
   
+
 //leer data
 var db = firebase.firestore();
+/*guardar usuarios nuevos en la base de datos*/
+export const guardarUsuario = () =>{
+  const nombre = document.getElementById('usuarioRegistro').value;
+  const correo = document.getElementById('emailRegistro').value;
+  const password = document.getElementById('passRegistro').value;
+
+  db.collection('usuarios').add({
+    nombre: nombre,
+    correo:correo,
+    password:password
+  })
+  .then(function(docRef){
+    console.log("usuario registrado: ", docRef);
+    console.log(nombre, correo, password)
+  })
+  .catch(function(error){
+     console.error("Errod al agregar user: ", error);
+  })
+}
 
 export const guardar = () => {
 
@@ -120,7 +141,7 @@ export const mostrarPublicacionHome = () => {
     <div id="contenedorPublicacion "data-publicacion="${doc.id}" > 
       <div id="contenedorIdentidad"> 
         <img id="fotoParticipante" scr="./image/Ellipse.png"/>
-        <p id="nombreUser"></p>
+        <p class="nombreUser"></p>
       </div>
       <div id="imagenPublicacion"> </div>
         <p id="textoPublicacion"> ${doc.data().post}</p>
@@ -133,7 +154,6 @@ export const mostrarPublicacionHome = () => {
         </div>
       </div>
 `
-
      
       //borrar publicaciones
       let botonEliminar = document.querySelectorAll(".btnEliminar")
@@ -149,12 +169,13 @@ export const mostrarPublicacionHome = () => {
 
       })
 
+
     });
 
   });
 
 };
-
+/*funcion eliminar */
 const eliminar = (id) => {
   console.log("ingresooo a eliminar ")
   db.collection("feña").doc(id).delete().then(function () {
@@ -164,4 +185,23 @@ const eliminar = (id) => {
     console.error("Error removing document: ", error);
   });
 }  
+
+/*editar datos */
+export const editar = (id) => {
+  var washingtonRef = db.collection("feña").doc(id);
+
+  // Set the "capital" field of the city 'DC'
+  return washingtonRef.update({
+    post: pica,
+    foto: "",
+    tipo: tipo
+  })
+  .then(function() {
+      console.log("Document successfully updated!");
+  })
+  .catch(function(error) {
+      // The document probably doesn't exist.
+      console.error("Error updating document: ", error);
+  });
+} 
 
