@@ -485,6 +485,7 @@ export const editar = (id) => {
 /*aqui iran las funciones de firebase*/
 >>>>>>> c2463f9... funcion editar
 
+<<<<<<< HEAD
 export const registrar = () => {
   console.log('diste clic en registrar')
   const email = document.querySelector('#emailRegistro').value;
@@ -495,6 +496,20 @@ export const registrar = () => {
     console.log("ingreso a registrar")
     guardarUsuario()
     enviarCorreo()
+=======
+export const registrar = () =>{
+    console.log('diste clic en registrar')
+    const email = document.querySelector('#emailRegistro').value;
+    const pass = document.querySelector('#passRegistro').value;
+    const usuario = document.querySelector('#usuarioRegistro').value;
+    firebase.auth().createUserWithEmailAndPassword(email, pass).then(function (data) {
+        enviarCorreo();
+        guardarUsuario();
+      }).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+>>>>>>> 433206d... registro guardando usuario
     
 =======
     enviarCorreo()
@@ -885,8 +900,28 @@ export const editar = (id) => {
 >>>>>>> c2463f9... funcion editar
 =======
   
+
 //leer data
 var db = firebase.firestore();
+/*guardar usuarios nuevos en la base de datos*/
+export const guardarUsuario = () =>{
+  const nombre = document.getElementById('usuarioRegistro').value;
+  const correo = document.getElementById('emailRegistro').value;
+  const password = document.getElementById('passRegistro').value;
+
+  db.collection('usuarios').add({
+    nombre: nombre,
+    correo:correo,
+    password:password
+  })
+  .then(function(docRef){
+    console.log("usuario registrado: ", docRef);
+    console.log(nombre, correo, password)
+  })
+  .catch(function(error){
+     console.error("Errod al agregar user: ", error);
+  })
+}
 
 export const guardar = () => {
 
@@ -926,7 +961,7 @@ export const mostrarPublicacionHome = () => {
     <div id="contenedorPublicacion "data-publicacion="${doc.id}" > 
       <div id="contenedorIdentidad"> 
         <img id="fotoParticipante" scr="./image/Ellipse.png"/>
-        <p id="nombreUser"></p>
+        <p class="nombreUser"></p>
       </div>
       <div id="imagenPublicacion"> </div>
         <p id="textoPublicacion"> ${doc.data().post}</p>
@@ -939,7 +974,6 @@ export const mostrarPublicacionHome = () => {
         </div>
       </div>
 `
-
      
       //borrar publicaciones
       let botonEliminar = document.querySelectorAll(".btnEliminar")
@@ -955,12 +989,13 @@ export const mostrarPublicacionHome = () => {
 
       })
 
+
     });
 
   });
 
 };
-
+/*funcion eliminar */
 const eliminar = (id) => {
   console.log("ingresooo a eliminar ")
   db.collection("feña").doc(id).delete().then(function () {
@@ -971,4 +1006,26 @@ const eliminar = (id) => {
   });
 }  
 
+<<<<<<< HEAD
 >>>>>>> 7fd278c... css template login, registro y recuperacion
+=======
+/*editar datos */
+export const editar = (id) => {
+  var washingtonRef = db.collection("feña").doc(id);
+
+  // Set the "capital" field of the city 'DC'
+  return washingtonRef.update({
+    post: pica,
+    foto: "",
+    tipo: tipo
+  })
+  .then(function() {
+      console.log("Document successfully updated!");
+  })
+  .catch(function(error) {
+      // The document probably doesn't exist.
+      console.error("Error updating document: ", error);
+  });
+} 
+
+>>>>>>> 433206d... registro guardando usuario
