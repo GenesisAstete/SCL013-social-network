@@ -30,3 +30,9 @@ firebase.auth().onAuthStateChanged((user) => {
         iniciarSesion();
     }
 });
+<<<<<<< HEAD
+=======
+ 
+
+
+>>>>>>> 433206d... registro guardando usuario
