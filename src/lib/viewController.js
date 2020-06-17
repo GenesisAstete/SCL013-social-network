@@ -226,7 +226,6 @@ export const editar = (id) => {
   contenedorPublicarEdicion.appendChild(botonPublicar);
 
 
-
   //cambiamos de <P> a <Input>
   const parrafoPublicacion = document.getElementById("contenedorPubli");
   parrafoPublicacion.innerHTML = "";
