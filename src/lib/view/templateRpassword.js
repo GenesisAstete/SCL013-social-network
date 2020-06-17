@@ -1,8 +1,9 @@
-import {restablecerContrasena} from "../viewController.js";
-export const Rpassword = () => {
-    window.location.hash = '/recuperar';
+import { restablecerContrasena } from '../viewController.js';
 
-    document.getElementById('root').innerHTML = /*html*/`
+export const Rpassword = () => {
+  window.location.hash = '/recuperar';
+
+  document.getElementById('root').innerHTML = /*html*/`
     
     <div class="contenedorRecuperar contGeneralFormularios">
     <p class="title2 title">Recuperar Contraseña</p>
@@ -13,10 +14,9 @@ export const Rpassword = () => {
       <button  class="inputIngreso input2"id="enviarR">Enviar</button>
     </div>
   </div>
-    `
+    `;
   const enviarR = document.getElementById('enviarR');
-  enviarR.addEventListener("click", () => {
-    restablecerContrasena(); 
-  })
-
-}
+  enviarR.addEventListener('click', () => {
+    restablecerContrasena();
+  });
+};
