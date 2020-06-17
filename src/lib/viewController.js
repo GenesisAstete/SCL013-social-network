@@ -376,12 +376,28 @@ export const editar = (id) => {
   //para crear el boton publicar edicion
 
 
+<<<<<<< HEAD
   const botonPublicar = document.querySelector('#botonGuardarEdicion');
 
   botonPublicar.addEventListener("click", () => {
     const editando = db.collection("publicaciones").doc(id);
     const post = document.querySelector('.inputReescribir').value;
     const tipo = document.getElementById("opcionPublicar").value;
+=======
+  //cambiamos de <P> a <Input>
+  const parrafoPublicacion = document.getElementById("contenedorPubli");
+  parrafoPublicacion.innerHTML = "";
+  const inputReescribir = document.createElement("input");
+  inputReescribir.setAttribute("id", "inputReescribir");
+  inputReescribir.innerHTML = "";
+  parrafoPublicacion.appendChild(inputReescribir);
+
+
+  botonPublicar.onclick = function () {
+    const editando = db.collection("pruebaGenesis").doc(id);
+    const post = document.getElementById("inputReescribir").value
+    const tipo = document.getElementById("opcionPublicar").value
+>>>>>>> f1f4e3e... aplica eslint
 
     return editando.update({
         post: post,
