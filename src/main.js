@@ -3,7 +3,11 @@
 import { myFunction } from './lib/index.js';
 import { login } from './lib/view/templateLogin.js';
 import { home } from './lib/view/templateHome.js';
+<<<<<<< HEAD
 import { cerrarSesion, iniciarSesion } from './lib/viewController.js';
+=======
+import { cerrarSesion, iniciarSesion} from './lib/viewController.js';
+>>>>>>> 7caa972... funcion observador firebase
 
 myFunction();
 
