@@ -1,8 +1,8 @@
 // importamos funciones
 import { myFunction } from './lib/index.js';
 import { login } from './lib/view/templateLogin.js';
-import { home, cerrarSesion, iniciarSesion} from './lib/view/templateHome.js';
-
+import { home } from './lib/view/templateHome.js';
+import { cerrarSesion, iniciarSesion} from './lib/viewController.js';
 
 myFunction();
 
