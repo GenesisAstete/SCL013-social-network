@@ -144,16 +144,6 @@ export const mostrarPublicacionHome = () => {
          </div>
       
       </div>
-<<<<<<< HEAD
-      </div>
-`
-      //borrar publicaciones
-      let botonEliminar = document.querySelectorAll(".btnEliminar")
-      botonEliminar.forEach(btn => {
-        console.log("ingresoooooooooo eliminar")
-        btn.addEventListener("click", (e) => {
-          let idPublicacion = e.target.parentElement.parentElement.getAttribute("data-publicacion");
-=======
       </div>`;
 
       // borrar publicaciones
@@ -162,7 +152,6 @@ export const mostrarPublicacionHome = () => {
         console.log('ingresoooooooooo eliminar');
         btn.addEventListener('click', (e) => {
           let idPublicacion = e.target.parentElement.getAttribute('data-publicacion');
->>>>>>> 6384584... mostrar foto y nombre user google
           eliminar(idPublicacion);
           console.log('borraaaaarrrrrrrrrr');
         });
@@ -170,17 +159,11 @@ export const mostrarPublicacionHome = () => {
       // editar publicacion
       let botonEditar = document.querySelectorAll('.btnEditar');
       botonEditar.forEach(btn => {
-<<<<<<< HEAD
 
         console.log("ingreso al query de EDITAR")
         btn.addEventListener("click", (event) => {
 
           let idPublicacion = event.target.parentElement.parentElement.parentElement.getAttribute("data-publicacionEditar");
-=======
-        console.log('ingreso al query de EDITAR');
-        btn.addEventListener('click', (event) => {
-          let idPublicacion = event.target.parentElement.parentElement.getAttribute("data-publicacionEditar");
->>>>>>> 6384584... mostrar foto y nombre user google
           console.log(idPublicacion);
           editar(idPublicacion);
         });
@@ -226,7 +209,6 @@ export const editar = (id) => {
   // editado con lore
   db.collection('pruebaGenesis').doc(id).get().then(doc => {
     console.log(doc.data().post);
-<<<<<<< HEAD
     document.getElementById("inputReescribir").value = doc.data().post;
     document.getElementById("opcionPublicar").value = doc.data().tipo;
   })
@@ -271,27 +253,6 @@ export const editar = (id) => {
         const tipo = document.getElementById("opcionPublicar").value = "";
 
 
-=======
-    document.getElementById('inputHome').value = doc.data().post;
-    document.getElementById('opcionPublicar').value = doc.data().tipo;
-  });
-
-  const botonEditar = document.getElementById('btnEditar');
-  botonEditar.onclick = function () {
-    const editando = db.collection('pruebaGenesis').doc(id);
-    const post = document.getElementById('inputHome').value;
-    const tipo = document.getElementById('opcionPublicar').value;
-
-    return editando.update({
-      post: 'post',
-      tipo: 'tipo',
-    })
-      .then(() => {
-        console.log('Document successfully updated!');
-        botonEditar.innerHTML = 'Publicacion Editada';
-        const post = document.getElementById("inputHome").value = '';
-        const tipo = document.getElementById("opcionPublicar").value = '';
->>>>>>> 6384584... mostrar foto y nombre user google
       })
       .catch((error) => {
         // The document probably doesn't exist.

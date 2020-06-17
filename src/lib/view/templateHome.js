@@ -21,7 +21,7 @@ export const home = () => {
       <input id="inputHome" type="text" placeholder="¿Cual es tu pica'?">
       <input type="file"> 
       <select id="opcionPublicar">
-<<<<<<< HEAD
+
 
       <option>Ruta </option>
       <option> Hospedaje</option>
@@ -33,18 +33,6 @@ export const home = () => {
       </select>
          <button id="btnPublicar"> Publicar</button>
 
-=======
-        <option>Ruta </option>
-        <option> Hospedaje</option>
-        <option>Comida </option>
-        <option>Clima </option>
-        <option>Transporte </option>
-        <option> Tour</option>
-       </select>
-
-  <button id="btnPublicar"> Publicar</button>
-  <button id="btnEditar"> Editar</button>
->>>>>>> 6384584... mostrar foto y nombre user google
    </div>
 
   <div id="contenedorMayor">
