@@ -482,7 +482,9 @@ export const registrar = () => {
   const pass = document.querySelector('#passRegistro').value;
   const usuario = document.querySelector('#usuarioRegistro').value;
   firebase.auth().createUserWithEmailAndPassword(email, pass).then(function (data) {
+    console.log("ingreso a registrar")
     enviarCorreo()
+    guardarUsuario()
   }).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -557,6 +559,28 @@ export const restablecerContrasena = () => {
 
 //leer data
 var db = firebase.firestore();
+//guardar Usuario
+/*guardar usuarios nuevos en la base de datos*/
+export const guardarUsuario = () => {
+  console.log("ingreso a guardar usuario")
+  const nombre = document.getElementById('usuarioRegistro').value;
+  const correo = document.getElementById('emailRegistro').value;
+  const password = document.getElementById('passRegistro').value;
+  db.collection('usuarios').add({
+
+    nombre: nombre,
+    correo: correo,
+    password: password
+  }).then(function (docRef) {
+    console.log("usuario registrado: ", docRef);
+    console.log(nombre, correo, password)
+  }).catch(function (error) {
+    console.error("Errod al agregar user: ", error);
+  })
+}
+
+
+
 
 export const guardar = () => {
 
@@ -580,6 +604,9 @@ export const guardar = () => {
   mostrarPublicacionHome();
 }
 
+
+
+
 //imprimir publicacion
 export const mostrarPublicacionHome = () => {
   db.collection("pruebaGenesis").onSnapshot((querySnapshot) => {
@@ -598,14 +625,21 @@ export const mostrarPublicacionHome = () => {
         <p id="nombreUser"></p>
       </div>
       <div id="imagenPublicacion"> </div>
-        <p id="textoPublicacion"> ${doc.data().post}</p>
-        <button class="btnEliminar">Eliminar  </button> 
-        <button class="btnEditar">Editar  </button> 
+      
+      <div id="contenedorPubli"> 
+      <p id="textoPublicacion"> ${doc.data().post}</p>
+      </div> 
+       
         <p id="tipoPublicacion"> ${doc.data().tipo}</p>
         <div id="interacciones">
           <a id="btnCompartir"></a>
           <a id="btnRecomiendo"></a>
         </div>
+        <div id="contenedorBtnEdicion"> 
+         <button class="btnEliminar">Eliminar  </button> 
+        <button class="btnEditar">Editar  </button>
+         </div>
+      
       </div>
       </div>
 `
@@ -614,7 +648,7 @@ export const mostrarPublicacionHome = () => {
       botonEliminar.forEach(btn => {
         console.log("ingresoooooooooo eliminar")
         btn.addEventListener("click", (e) => {
-          let idPublicacion = e.target.parentElement.getAttribute("data-publicacion");
+          let idPublicacion = e.target.parentElement.parentElement.getAttribute("data-publicacion");
           eliminar(idPublicacion);
           console.log("borraaaaarrrrrrrrrr")
         });
@@ -626,7 +660,7 @@ export const mostrarPublicacionHome = () => {
         console.log("ingreso al query de EDITAR")
         btn.addEventListener("click", (event) => {
 
-          let idPublicacion = event.target.parentElement.parentElement.getAttribute("data-publicacionEditar");
+          let idPublicacion = event.target.parentElement.parentElement.parentElement.getAttribute("data-publicacionEditar");
           console.log(idPublicacion);
           editar(idPublicacion);
 
@@ -653,13 +687,36 @@ export const editar = (id) => {
   db.collection("pruebaGenesis").doc(id).get().then(doc => {
 
     console.log(doc.data().post);
-    document.getElementById("inputHome").value = doc.data().post;
+    document.getElementById("inputReescribir").value = doc.data().post;
     document.getElementById("opcionPublicar").value = doc.data().tipo;
   })
-  const botonEditar = document.getElementById("btnEditar");
-  botonEditar.onclick = function () {
+
+  //const botonEditar = document.getElementById("btnEditar");
+
+  //se trae el ID de contenedor de botones 
+  //para crear el boton publicar edicion
+
+  const contenedorPublicarEdicion = document.getElementById("contenedorBtnEdicion")
+  contenedorPublicarEdicion.innerHTML = "";
+  const botonPublicar = document.createElement("button");
+  botonPublicar.setAttribute("id", "botonPublicarEdicion")
+  botonPublicar.innerHTML = "Publicar Edicion"
+  contenedorPublicarEdicion.appendChild(botonPublicar);
+
+
+
+  //cambiamos de <P> a <Input>
+  const parrafoPublicacion = document.getElementById("contenedorPubli");
+  parrafoPublicacion.innerHTML = "";
+  const inputReescribir = document.createElement("input");
+  inputReescribir.setAttribute("id", "inputReescribir");
+  inputReescribir.innerHTML = "";
+  parrafoPublicacion.appendChild(inputReescribir);
+
+
+  botonPublicar.onclick = function () {
     const editando = db.collection("pruebaGenesis").doc(id);
-    const post = document.getElementById("inputHome").value
+    const post = document.getElementById("inputReescribir").value
     const tipo = document.getElementById("opcionPublicar").value
 
     return editando.update({
@@ -669,15 +726,18 @@ export const editar = (id) => {
       })
       .then(function () {
         console.log("Document successfully updated!");
-        botonEditar.innerHTML = "Publicacion Editada";
-        const post = document.getElementById("inputHome").value = "";
+        //  botonEditar.innerHTML = "Publicacion Editada";
+        const post = document.getElementById("inputReescribir").value = "";
         const tipo = document.getElementById("opcionPublicar").value = "";
+
+
       })
       .catch(function (error) {
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
       });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> c2463f9... funcion editar
@@ -694,3 +754,6 @@ export const editar = (id) => {
 >>>>>>> a73173d... funcion editar
 =======
 >>>>>>> 505ca5c... registro guardando usuario
+=======
+}
+>>>>>>> 20219ef... boton edicion funcionando solo con una publicacion
