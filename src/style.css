@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
+
 /*tipografía de la app*/
 @font-face {
     font-family: 'Brushstrike';
@@ -11,10 +11,12 @@
     font-family: "Roboto-Regular";
     src: url(./fonts/Roboto-Regular.ttf);
 }
+
 /*contenedor template login*/
-#contenedorGeneral{
+#contenedorGeneral {
     width: 100%;
 }
+
 /*formulario de login - template login*/
 .contGeneralFormularios {
     display: flex;
@@ -24,24 +26,36 @@
 }
 
 /*clase para imágenes de slider*/
-.imagenSlider{
+.imagenSlider {
     width: 100%;
     height: 816px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
 /*imágenes recortadas para celular*/
-#imagenUno {background-image: url(./image/login/torres.png);}
-#imagenDos {background-image: url(./image/login/Queulat_glaciar_24\ 1.png);}
-#imagenTres {background-image: url(./image/login/iglesia-machuca\ 1.png);}
-#imagenCuatro {background-image: url(./image/login/moaiscelu.jpg);}
+#imagenUno {
+    background-image: url(./image/login/torres.png);
+}
+
+#imagenDos {
+    background-image: url(./image/login/Queulat_glaciar_24\ 1.png);
+}
+
+#imagenTres {
+    background-image: url(./image/login/iglesia-machuca\ 1.png);
+}
+
+#imagenCuatro {
+    background-image: url(./image/login/moaiscelu.jpg);
+}
 
 .logo {
     position: absolute;
     width: 187px;
     height: 125px;
     border-radius: 10px;
-    margin-top: -700px; 
+    margin-top: -700px;
 
 }
 
@@ -55,15 +69,17 @@
 
 /*icono circular usuario*/
 #usuario {
-    position: absolute; 
+    position: absolute;
     margin-top: -437px;
     z-index: 2;
 }
+
 /*template registro y recuperar*/
-.usuario2{
+.usuario2 {
     margin-top: -115px;
     z-index: 1;
 }
+
 /*contenedor de input y botones de login*/
 .contenedorIngreso {
     position: absolute;
@@ -76,8 +92,9 @@
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
 }
+
 /*texto ¿Olvido su contraseña? - template login*/
-#textoOlvido{
+#textoOlvido {
     text-align: center;
     font-size: 15px;
     color: black;
@@ -85,6 +102,7 @@
     margin-top: 2%;
     cursor: pointer;
 }
+
 /*texto ¿Aún no eres parte? - template login*/
 #pTres {
     margin-top: 10px;
@@ -92,14 +110,15 @@
     font-family: "Roboto-Regular";
     font-size: 15px;
 }
+
 /*template registro fondo */
 .contenedorRegistro {
     background-image: url(./image/puente.png);
-<<<<<<< HEAD
     background-repeat: no-repeat;
-    height: 896px;   
+    height: 896px;
     z-index: -1;
 }
+
 /*template recuperar*/
 .contenedorRecuperar {
     background-image: url(./image/login/recuperarcelu.jpg);
@@ -107,19 +126,7 @@
     background-size: 100%;
     height: 896px;
 }
-=======
-    background-repeat: no-repeat;
-    height: 896px;   
-    z-index: -1;
-}
-/*template recuperar*/
-.contenedorRecuperar {
-    background-image: url(./image/login/recuperarcelu.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 896px;
-}
->>>>>>> 55a6d03... css responsive template de inicio
+
 /*input de ingreso, registro y recuperacion*/
 .inputIngreso {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -129,13 +136,14 @@
     font-family: "Roboto-Regular";
     margin-top: 5.5%;
 }
-.input2{
-    margin-top:8.5%;
+
+.input2 {
+    margin-top: 8.5%;
 }
 
 /*placeholder */
 input::-webkit-input-placeholder {
-   padding-left: 10px;
+    padding-left: 10px;
 }
 
 #emailIngreso #registrarse {
@@ -147,6 +155,7 @@ input::-webkit-input-placeholder {
     background-image: url(./image/inputPass.png);
     background-repeat: no-repeat;
 }
+
 /*estilo botones en general*/
 button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -156,6 +165,7 @@ button {
     cursor: pointer;
     font-family: "Roboto-Regular";
 }
+
 /*boton iniciar sesion con google*/
 #btngoogle {
     background-image: url(./image/buttonGoogle.png);
@@ -163,16 +173,18 @@ button {
     background-size: 70%;
     background-position-y: center;
 }
+
 /*boto iniciar sesion con email*/
-#iniciarSesion{
+#iniciarSesion {
     background: linear-gradient(180.75deg, #039F87 3.82%, #00D1CD 96.19%);
     box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-#registrarse{
+#registrarse {
     background: linear-gradient(180.75deg, #039F87 3.82%, #00D1CD 96.19%);
     box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
 }
+
 /*titulos template login*/
 .title {
     font-size: 300%;
@@ -183,10 +195,12 @@ button {
     width: 98%;
     position: absolute;
 }
+
 /*titulo registro y recuperar */
 .title2 {
     margin-top: -180px;
 }
+
 /*muro general*/
 header {
     background: #03293C;
@@ -234,7 +248,7 @@ header {
     margin-left: 30px;
 }
 
-#contenedorEscribir{
+#contenedorEscribir {
     margin-top: 47%;
 }
 
@@ -255,7 +269,6 @@ header {
     color: black;
     height: 47px;
     font-size: 20px;
-<<<<<<< HEAD
 }
 
 #fotoParticipante {
@@ -301,376 +314,17 @@ header {
     width: 401px;
 }
 
-/*ultimo contenedor , para salir o entrar a otra pag*/
-.contenedorSalida {
-    background: #03293C;
-    display: flex;
-    justify-content: space-between;
-    height: 48px;
-    position: fixed;
-    bottom: 0;
-    width: 100%
+.btnEditar {
+    width: 231px;
 }
 
-#btnHome {
-    background-image: url("./image/VectorCasa.png");
-    background-repeat: no-repeat;
-    width: 32px;
+.btnEliminar {
+    width: 186px;
 }
 
-#btnCerrar {
-    background-image: url("./image/cerrarSesion.png");
-    background-repeat: no-repeat;
-    width: 32px;
-}
-
-#btnMuroPersonal {
-    background-image: url("./image/Ellipse.png");
-    background-repeat: no-repeat;
-    width: 49px;
-}
-/*Computador*/
-@media (min-width: 1024px) /* and (max-width: 1080px)  */{
-
-    /*cambio de imagenes de fondo para la version de tablet y escritorio*/
-    #imagenUno {background-image: url(./image/login/torresEscritorio.png);}
-<<<<<<< HEAD
-
-    #imagenDos {background-image: url(./image/login/cascadaEscritorio.png);}
-
-    #imagenTres {background-image: url(./image/login/iglesiaEscritorio.png);}
-
-    #imagenCuatro {background-image: url(./image/login/moais.jpg);} 
-
-    .imagenSlider{
-        height: 1077px;
-        font-size: 20px;
-    }
-
-    #usuario {
-        margin-top: -695px;
-    }
-
-    .logo {
-       margin-top: -956px;
-    }
-
-    .contenedorRegistro {
-        background-image: url(./image/login/muelleEscritorio.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        height: 1077px;
-        font-size: 20px;
-    }
-    .logo2{
-        margin-top: -392px;
-    }
-    .usuario2{
-        margin-top: -311px;
-        z-index: 1;
-    }
-    .title2{
-        margin-top: -226px;
-    }
-    .input2{
-        margin-top:8.5%;
-    }
-
-    .contenedorRecuperar {
-        background-image: url(./image/login/termasEscritorio.jpg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        height: 1077px;
-    }
-    
-=======
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-/*tipografía de la app*/
-@font-face {
-    font-family: 'Brushstrike';
-    src: url(./fonts/Brushstrike\ trial.ttf);
-    font-family: "Roboto-Regular";
-    src: url(./fonts/Roboto-Regular.ttf);
-}
-/*contenedor template login*/
-#contenedorGeneral{
-    width: 100%;
-}
-/*formulario de login - template login*/
-.contGeneralFormularios {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/*clase para imágenes de slider*/
-.imagenSlider{
-    width: 100%;
-    height: 816px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-/*imágenes recortadas para celular*/
-#imagenUno {background-image: url(./image/login/torres.png);}
-#imagenDos {background-image: url(./image/login/Queulat_glaciar_24\ 1.png);}
-#imagenTres {background-image: url(./image/login/iglesia-machuca\ 1.png);}
-#imagenCuatro {background-image: url(./image/login/moaiscelu.jpg);}
-
-.logo {
-    position: absolute;
-    width: 187px;
-    height: 125px;
-    border-radius: 10px;
-    margin-top: -700px; 
-
-}
-
-.logo2 {
-    position: absolute;
-    width: 187px;
-    height: 125px;
-    border-radius: 10px;
-    margin-top: -315px;
-}
-
-/*icono circular usuario*/
-#usuario {
-    position: absolute; 
-    margin-top: -437px;
-    z-index: 2;
-}
-/*template registro y recuperar*/
-.usuario2{
-    margin-top: -115px;
-    z-index: 1;
-}
-/*contenedor de input y botones de login*/
-.contenedorIngreso {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 331px;
-    height: 333px;
-    top: 398px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-}
-/*texto ¿Olvido su contraseña? - template login*/
-#textoOlvido{
-    text-align: center;
-    font-size: 15px;
-    color: black;
-    font-family: "Roboto-Regular";
-    margin-top: 2%;
-    cursor: pointer;
-}
-/*texto ¿Aún no eres parte? - template login*/
-#pTres {
-    margin-top: 10px;
-    text-align: center;
-    font-family: "Roboto-Regular";
-    font-size: 15px;
-}
-/*template registro fondo */
-.contenedorRegistro {
-    background-image: url(./image/puente.png);
-    background-repeat: no-repeat;
-    height: 896px;   
-    z-index: -1;
-}
-/*template recuperar*/
-.contenedorRecuperar {
-    background-image: url(./image/login/recuperarcelu.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 896px;
-}
-/*input de ingreso, registro y recuperacion*/
-.inputIngreso {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    height: 35px;
-    width: 276px;
-    font-family: "Roboto-Regular";
-    margin-top: 5.5%;
-}
-.input2{
-    margin-top:8.5%;
-}
-
-/*placeholder */
-input::-webkit-input-placeholder {
-   padding-left: 10px;
-}
-
-#emailIngreso #registrarse {
-    background-repeat: no-repeat;
-    background-image: url(./image/inputEmail.png);
-}
-
-#passIngreso {
-    background-image: url(./image/inputPass.png);
-    background-repeat: no-repeat;
-}
-/*estilo botones en general*/
-button {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    width: 276px;
-    height: 34px;
-    cursor: pointer;
-    font-family: "Roboto-Regular";
-}
-/*boton iniciar sesion con google*/
-#btngoogle {
-    background-image: url(./image/buttonGoogle.png);
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position-y: center;
-}
-/*boto iniciar sesion con email*/
-#iniciarSesion{
-    background: linear-gradient(180.75deg, #039F87 3.82%, #00D1CD 96.19%);
-    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
-}
-
-#registrarse{
-    background: linear-gradient(180.75deg, #039F87 3.82%, #00D1CD 96.19%);
-    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.5);
-}
-/*titulos template login*/
-.title {
-    font-size: 300%;
-    font-family: 'Brushstrike';
-    text-align: center;
-    color: white;
-    margin-top: 200px;
-    width: 98%;
-    position: absolute;
-}
-/*titulo registro y recuperar */
-.title2 {
-    margin-top: -180px;
-}
-/*muro general*/
-header {
-    background: #03293C;
-    height: 196px;
-    position: fixed;
-    top: 0;
-}
-
-#contenedorBotonesMenu {
-    display: flex;
-    margin-top: 27px;
-}
-
-#logoMenu {
-    border-left-width: 1px;
-    margin-left: 118px;
-    width: 176px;
-    height: 137px;
-}
-
-.colorUno {
-    background: #49BEB7;
-    font-size: 110%;
-    padding-right: 9px;
-    padding-left: 9px;
-    height: 28px;
-}
-
-.colorDos {
-    background: #E4C01F;
-    font-size: 110%;
-    padding-right: 9px;
-    padding-left: 9px;
-    height: 28px;
-}
-
-#btnPublicar {
-    width: 412px;
-    background: #00D1CD;
-}
-
-#opcionPublicar {
-    width: 92px;
-    height: 25px;
-    margin-left: 30px;
-}
-
-#contenedorEscribir{
-    margin-top: 47%;
-}
-
-/*contenedor publicacion*/
-#contenedorPublicacion {
-    border-color: rgba(68, 68, 68, 0.18);
-    height: 298px;
-    background: rgba(68, 68, 68, 0.18);
-    margin-top: 35px;
-}
-
-#contenedorIdentidad {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#nombreUser {
-    color: black;
-    height: 47px;
-    font-size: 20px;
-=======
->>>>>>> 7fd278c... css template login, registro y recuperacion
-}
-
-#fotoParticipante {
-    border-style: solid;
-    border-color: red;
-    width: 75px;
-
-}
-
-#imagenPublicacion {
-    background: #03293C;
-    height: 157px;
-    width: 412px;
-}
-
-/*interacciones de la publicacion*/
-#interacciones {
-    background: #00D1CD;
-    height: 31px;
-    margin-top: 0px;
-    width: 422px;
-    margin-right: 6px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-#btnCompartir {
-    background-image: url("./image/Vector\ Enviar.png");
-    background-repeat: no-repeat;
-    width: 32px;
-    margin-right: 25px;
-}
-
-#btnRecomiendo {
-    background-image: url("./image/Vector\ Recomiendo.png");
-    background-repeat: no-repeat;
-    width: 32px;
-    margin-right: 25px;
-}
-
-#inputHome {
-    height: 83px;
-    width: 401px;
+#inputReescribir {
+    height: 80px;
+    width: 375px
 }
 
 /*ultimo contenedor , para salir o entrar a otra pag*/
@@ -701,19 +355,31 @@ header {
     background-repeat: no-repeat;
     width: 49px;
 }
+
 /*Computador*/
-@media (min-width: 1024px) /* and (max-width: 1080px)  */{
+@media (min-width: 1024px)
+
+/* and (max-width: 1080px)  */
+    {
 
     /*cambio de imagenes de fondo para la version de tablet y escritorio*/
-    #imagenUno {background-image: url(./image/login/torresEscritorio.png);}
+    #imagenUno {
+        background-image: url(./image/login/torresEscritorio.png);
+    }
 
-    #imagenDos {background-image: url(./image/login/cascadaEscritorio.png);}
+    #imagenDos {
+        background-image: url(./image/login/cascadaEscritorio.png);
+    }
 
-    #imagenTres {background-image: url(./image/login/iglesiaEscritorio.png);}
+    #imagenTres {
+        background-image: url(./image/login/iglesiaEscritorio.png);
+    }
 
-    #imagenCuatro {background-image: url(./image/login/moais.jpg);} 
+    #imagenCuatro {
+        background-image: url(./image/login/moais.jpg);
+    }
 
-    .imagenSlider{
+    .imagenSlider {
         height: 1077px;
         font-size: 20px;
     }
@@ -723,7 +389,7 @@ header {
     }
 
     .logo {
-       margin-top: -956px;
+        margin-top: -956px;
     }
 
     .contenedorRegistro {
@@ -733,76 +399,29 @@ header {
         height: 1077px;
         font-size: 20px;
     }
-    .logo2{
+
+    .logo2 {
         margin-top: -392px;
     }
-    .usuario2{
+
+    .usuario2 {
         margin-top: -311px;
         z-index: 1;
     }
-    .title2{
+
+    .title2 {
         margin-top: -226px;
     }
-=======
 
-    #imagenDos {background-image: url(./image/login/cascadaEscritorio.png);}
-
-    #imagenTres {background-image: url(./image/login/iglesiaEscritorio.png);}
-
-    #imagenCuatro {background-image: url(./image/login/moais.jpg);} 
-
-    .imagenSlider{
-        height: 1077px;
-        font-size: 20px;
-    }
-
-    #usuario {
-        margin-top: -695px;
-    }
-
-    .logo {
-       margin-top: -956px;
-    }
-
-    .contenedorRegistro {
-        background-image: url(./image/login/muelleEscritorio.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        height: 1077px;
-        font-size: 20px;
-    }
-    .logo2{
-        margin-top: -392px;
-    }
-    .usuario2{
-        margin-top: -311px;
-        z-index: 1;
-    }
-    .title2{
-        margin-top: -226px;
-    }
->>>>>>> 55a6d03... css responsive template de inicio
-    .input2{
-        margin-top:8.5%;
+    .input2 {
+        margin-top: 8.5%;
     }
 
     .contenedorRecuperar {
-<<<<<<< HEAD
-<<<<<<< HEAD
         background-image: url(./image/login/termasEscritorio.jpg);
-=======
-        background-image: url(./image/login/termasrrecuperar.jpg);
->>>>>>> 55a6d03... css responsive template de inicio
-=======
-        background-image: url(./image/login/termasEscritorio.jpg);
->>>>>>> 7fd278c... css template login, registro y recuperacion
         background-repeat: no-repeat;
         background-size: 100% 100%;
         height: 1077px;
     }
-    
-<<<<<<< HEAD
->>>>>>> d4ba488... css template login, registro y recuperacion
-=======
->>>>>>> 55a6d03... css responsive template de inicio
+
 }
