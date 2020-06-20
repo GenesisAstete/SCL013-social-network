@@ -1,8 +1,10 @@
-import { guardar, mostrarPublicacionHome } from '../viewController.js';
+import { guardar, mostrarPublicacionHome, dataGmail } from '../viewController.js';
+
 
 export const home = () => {
   window.location.hash = '/home';
-  const user = firebase.auth().currentUser;
+
+  const user = dataGmail();
   document.getElementById('root').innerHTML = /* html */ `
   <header>
   <img id="logoMenu" src="./image/logo.jpg">
