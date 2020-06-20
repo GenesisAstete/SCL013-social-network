@@ -1,9 +1,9 @@
-import {registrar} from "../viewController.js" ;
+import { registrar } from "../viewController.js";
 
 export const registro = () => {
   window.location.hash = '/registro';
 
- document.getElementById('root').innerHTML = /*html*/ `
+  document.getElementById('root').innerHTML = /*html*/ `
 
   <div class="contenedorRegistro contGeneralFormularios" >
     <img class="logo2" id="btnlogo"src="./image/logo.jpg">
@@ -16,12 +16,10 @@ export const registro = () => {
       <button class="inputIngreso input2" id="registrarse"> Registrarse</button>
     </div>
   </div>
-    `
+    `;
 
   const botonRegistro = document.getElementById('registrarse');
-  botonRegistro.addEventListener("click", () => {
-    registrar(); 
-  })
-
-}
-
+  botonRegistro.addEventListener('click', () => {
+    registrar();
+  });
+};

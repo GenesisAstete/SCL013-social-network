@@ -17,13 +17,5 @@ firebase.auth().onAuthStateChanged((user) => {
     login();
     iniciarSesion();
   }
-    if (user) {
-        home();
-        cerrarSesion()
-        console.log(user)
-    } else {
-        console.log('no existes')
-        login();
-        iniciarSesion();
-    }
+
 });

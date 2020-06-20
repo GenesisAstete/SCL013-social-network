@@ -1,9 +1,8 @@
-import { guardar, mostrarPublicacionHome/* , dataGmail */ } from '../viewController.js';
+import { guardar, mostrarPublicacionHome } from '../viewController.js';
 
 export const home = () => {
   window.location.hash = '/home';
-
-  // const user = dataGmail();
+  const user = firebase.auth().currentUser;
   document.getElementById('root').innerHTML = /* html */ `
   <header>
   <img id="logoMenu" src="./image/logo.jpg">
@@ -39,7 +38,7 @@ export const home = () => {
   </div>
   <div class="contenedorSalida"> 
     <a id="btnHome" href='#/home'></a>
-    <img src="" id="btnMuroPersonal" href="#/muroPersonal">
+    <img src="${user.photoURL}" id="btnMuroPersonal" href="#/muroPersonal">
     <a  id="btnCerrar"></a>
   </div>`;
 
