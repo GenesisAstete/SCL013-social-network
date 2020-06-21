@@ -2,6 +2,8 @@
 
 export const db = firebase.firestore();
 
+export const storage = firebase.storage();
+
 export const enviarCorreo = () => {
   firebase.auth().currentUser.sendEmailVerification().then(() => {
     alert('¡Verificación de correo enviada!');
@@ -12,7 +14,7 @@ export const enviarCorreo = () => {
 export const user = () => firebase.auth().currentUser;
 
 // actualizar perfil de usuarios registrados por correo electronico
-export const updateUserProfile = (nombre, fotoperfil, onSuccess, onError) => {
+/* export const updateUserProfile = (nombre, fotoperfil, onSuccess, onError) => {
   const actualUser = firebase.auth().currentUser;
   actualUser.updateProfile({
     displayName: nombre,
@@ -22,7 +24,7 @@ export const updateUserProfile = (nombre, fotoperfil, onSuccess, onError) => {
   }).catch((error) => {
     onError(error);
   });
-};
+}; */
 
 export const cerrarSesion = () => {
   const btnCerrar = document.querySelector('#btnCerrar');

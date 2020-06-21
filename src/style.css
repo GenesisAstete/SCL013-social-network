@@ -221,12 +221,20 @@ header {
     height: 28px;
 }
 
+.colorUno:hover {
+    height: 40px;
+}
+
 .colorDos {
     background: #E4C01F;
     font-size: 110%;
     padding-right: 9px;
     padding-left: 9px;
     height: 28px;
+}
+
+.colorDos:hover {
+    height: 40px;
 }
 
 #btnPublicar {
@@ -307,11 +315,19 @@ header {
 }
 
 .btnEditar {
-    width: 231px;
+    width: 54px;
+    background-image: url(./image/editar.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .btnEliminar {
-    width: 186px;
+    width: 54px;
+    background-image: url(./image/basura.png);
+    background-size: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #inputReescribir {
@@ -347,6 +363,70 @@ header {
     background-repeat: no-repeat;
     width: 49px;
 }
+
+/*corazon like*/
+
+
+.heart {
+    background-color: #C4C4C4;
+    height: 20px;
+    transform: rotate(-45deg);
+    width: 20px;
+    margin-bottom: 0.5em;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}
+
+.heart:before {
+    top: -10px;
+    left: 0;
+}
+
+.heart:after {
+    left: 10px;
+    top: 0;
+}
+
+.heart2 {
+    background-color: #BE58C0;
+    height: 20px;
+    transform: rotate(-45deg);
+    width: 20px;
+    margin-bottom: 0.5em;
+}
+
+.heart2:before,
+.heart2:after {
+  content: "";
+  background-color: #BE58C0;
+  border-radius: 50%;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}
+
+.heart2:before {
+    top: -10px;
+    left: 0;
+}
+
+.heart2:after {
+    left: 10px;
+    top: 0;
+}
+.counter-text{
+    font-size: 2em;
+    font-family: "Noto sans", sans-serif;
+}
+
 
 /*Computador*/
 @media (min-width: 1024px)

@@ -1,36 +1,42 @@
 import { guardar, mostrarPublicacionHome } from '../viewController.js';
 import { uploadImagePost } from '../storage.js';
+import { mostrarFiltros } from './filtros/mostrarFiltros.js';
 
 export const home = () => {
   window.location.hash = '/home';
 
   document.getElementById('root').innerHTML = `
   <header>
+  
   <img id="logoMenu" src="./image/logo.jpg">
   <div id="contenedorBotonesMenu">
-      <div class="colorUno">Ruta</div> 
-      <div class="colorDos">Hospedaje</div>
-      <div class="colorUno">Comida</div>
-      <div class="colorDos">Clima</div>
-      <div class="colorUno">Transporte</div>
-      <div class="colorDos">Tour</div>
+    <div class="colorUno" id="ruta">Ruta</div> 
+    <div class="colorDos" id="hospedaje">Hospedaje</div>
+    <div class="colorUno" id="comida">Comida</div>
+    <div class="colorDos" id="clima">Clima</div>
+    <div class="colorUno" id="transporte">Transporte</div>
+    <div class="colorDos" id="tour">Tour</div>
   </div>
+
   </header>
   <div id="contenedorEscribir">
       <input id="inputHome" type="text" placeholder="¿Cual es tu pica'?">
       <img id="fotoPublicacion">
       <input type="file" id="inputImg">
-      <select id="opcionPublicar">
-
-      <option>Ruta </option>
-      <option> Hospedaje</option>
-      <option>Comida </option>
-      <option>Clima </option>
-      <option>Transporte </option>
-      <option> Tour</option>
-
-      </select>
-         <button id="btnPublicar"> Publicar</button>
+      <form id="formSelect">
+        <select id="opcionPublicar" required>
+          <option value="" disabled selected>Categoría</option>
+          <option value="Ruta">Ruta</option>
+          <option value="Hospedaje"> Hospedaje</option>
+          <option value="Comida">Comida</option>
+          <option value="Clima">Clima</option>
+          <option value="Transporte">Transporte </option>
+          <option>Tour</option>
+        </select>
+      </form>
+      <span id="seleciona"></span>
+         <button id="btnPublicar" style="display: block" > Publicar</button>
+         <button id="botonGuardarEdicion"  style="display: none" >Guardar edicion </button>
    </div>
 
 <div id="contenedorMayor">
@@ -42,10 +48,58 @@ export const home = () => {
   <a  id="btnCerrar"></a>
 </div>
   `;
+  /*  const validarCampos = () => {
+ if (document.formSelect.opcionPublicar.value === 0 || document.formSelect.opcionPublicar.value === '') {
+      alert('Selecciona Una opción');
+      document.formSelect.opcionPublicar.focus();
+    }
+  };  */
+
+  const alternLogoMenu = document.querySelector('#logoMenu');
+  alternLogoMenu.addEventListener('click', () => {
+    window.location.reload();
+  });
+
+  /* const botonPublicar = document.getElementById('btnPublicar');
+  botonPublicar.addEventListener('click', () => {
+    guardar();
+  });
+  mostrarPublicacionHome() */
+
+  const botonRuta = document.getElementById('ruta');
+  botonRuta.addEventListener('click', () => {
+    mostrarFiltros('Ruta');
+  });
+
+  const botonHospedaje = document.getElementById('hospedaje');
+  botonHospedaje.addEventListener('click', () => {
+    mostrarFiltros('Hospedaje');
+  });
+
+  const botonComida = document.getElementById('comida');
+  botonComida.addEventListener('click', () => {
+    mostrarFiltros('Comida');
+  });
+
+  const botonClima = document.getElementById('clima');
+  botonClima.addEventListener('click', () => {
+    mostrarFiltros('Clima');
+  });
+
+  const botonTransporte = document.getElementById('transporte');
+  botonTransporte.addEventListener('click', () => {
+    mostrarFiltros('Transporte');
+  });
+
+  const botonTour = document.getElementById('tour');
+  botonTour.addEventListener('click', () => {
+    mostrarFiltros('Tour');
+  });
+
   const botonPublicar = document.getElementById('btnPublicar');
   botonPublicar.addEventListener('click', () => {
     const info = document.getElementById('inputImg').files;
-    if (info.lenght > 0) {
+    if (info.length > 0) {
       const urlImg = uploadImagePost(info[0], 'imgPublicacion');
       urlImg.then((url) => {
         guardar(url);
