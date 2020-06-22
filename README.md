@@ -27,16 +27,16 @@ También permitirá a los usuarios poder filtrar por categorias de lo que están
 YO: como Viajero QUIERO: Poder registrarme en la red social PARA: Ser parte de la Pica' del Viajero.
 
 ## Historia de Usuario 2:
-YO: como Viajero QUIERO: Hacer una publicación en el muro general PARA: realizar mi recomendación y ver la de otros viajeros
+YO: como Viajero QUIERO: Hacer una publicación en el muro general PARA: realizar mi recomendación y ver la de otros viajeros.
 
 ## Historia de Usuario 3:
-Yo como viajero quiero: subir una foto a la publicacion
+Yo como viajero quiero: subir una foto a la publicacion PARA: tener una referencia visual de la recomendación 
 
 ## Historia de Usuario 4:
-yo como viajero quiero poder filtrar las publicaciones por categorias para encontrar mas rapido una categoria
+yo como viajero quiero poder filtrar las publicaciones por categorias para encontrar mas rápido una categoria
 
 ## Historia de Usuario 5:
-YO: como Viajero QUIERO: dar me gusta publicación PARA: compartir la publicación que me gustó 
+YO: como Viajero QUIERO: dar me gusta publicación PARA: compartir la publicación que me gustó ???
 
 ###  Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)
 
@@ -44,13 +44,13 @@ YO: como Viajero QUIERO: dar me gusta publicación PARA: compartir la publicaci�
 ![diagrama](https://i.ibb.co/zQ6XzxR/Diagrama-de-flujo.jpg)
 
 ## Prototipo de Alta Fidelidad 
-![Figma Celular](https://www.figma.com/proto/ppsK0oDyWnI3UuhuFnlNPm/La-pica-del-viajero?node-id=150%3A41&scaling=scale-down)
-![Figma Escritorio](https://www.figma.com/proto/ppsK0oDyWnI3UuhuFnlNPm/La-pica-del-viajero?node-id=347%3A117&scaling=min-zoom)
+* [Figma Celular](https://www.figma.com/proto/ppsK0oDyWnI3UuhuFnlNPm/La-pica-del-viajero?node-id=150%3A41&scaling=scale-down)
+* [Figma Escritorio](https://www.figma.com/proto/ppsK0oDyWnI3UuhuFnlNPm/La-pica-del-viajero?node-id=347%3A117&scaling=min-zoom)
 ![figma](https://i.ibb.co/xSJshpZ/figma2.jpg)
 
 ## Test de usuarios. :arrow_forward:
 # Entre vista con Usuario 
-![VideoUsuario1](https://drive.google.com/file/d/119sSsE1c2jeDZECayzAkmAqecDNL2HQ6/view)
+* [VideoUsuario1](https://drive.google.com/file/d/119sSsE1c2jeDZECayzAkmAqecDNL2HQ6/view)
 ## Maze
 ![maze](https://i.ibb.co/bN43HWH/maze.png)
 
